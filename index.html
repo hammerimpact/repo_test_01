@@ -4,19 +4,30 @@
         <meta charset="utf-8">
         <title>css test</title>
         <link href="subfolder/style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div id="inline">
-            <img src="subfolder/game_01.png">
-            <img src="subfolder/game_02.png">
-            <img src="subfolder/game_03.png">
-            <img src="subfolder/game_04.png">
-        </div>        
-        <div id="block">
-            <img src="subfolder/game_01.png">
-            <img src="subfolder/game_02.png">
-            <img src="subfolder/game_03.png">
-            <img src="subfolder/game_04.png">
+        <div id="wrapper">
+            <header>
+                <h1 class="header-text">가변 그리드 레이어웃</h1>
+            </header>
+            <section class="content">
+                <h4>본문</h4>
+                <picture>
+                    <source srcset="subfolder/game_01.png" media="(min-width:1024px)">
+                    <source srcset="subfolder/game_02.png" media="(min-width:768px)">
+                    <source srcset="subfolder/game_03.png" media="(min-width:320px)">
+                    <img src="subfolder/game_01.png" style="width:70%;">
+                </picture>
+            </section>
+            <aside class="right-side">
+                <h4>사이드바</h4>
+            </aside>
+            <footer>
+                <h4>푸터</h4>
+            </footer>
         </div>
+
     </body>
+
 </html>
